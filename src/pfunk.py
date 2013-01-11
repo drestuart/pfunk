@@ -6,6 +6,7 @@ Created on Jan 11, 2013
 
 import Ragnarok
 
+
 def main():
     print "pfunk!"
 
