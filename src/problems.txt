@@ -1,0 +1,24 @@
+I'm having a problem using pygame with PyDev in Eclipse which I can't find addressed elsewhere.
+
+I have a very basic main.py like so:
+
+    import pygame
+    
+    def main():
+        print "main!"
+    
+    if __name__ == '__main__':
+        main()
+
+`pygame` gets flagged as an unresolved import error.  When running this I get:
+
+    /...Project folder.../src/main.py:9: RuntimeWarning: import threads: cannot import name time
+    (ImportError: cannot import name time)
+      import pygame
+    main!
+
+When I change the `import pygame` to `from pygame import *`, the editor no longer complains about the unresolved import, but I get the same error.  I can `import time` just fine.
+
+Finally, using python from the command-line, I can `import pygame` with no problems.
+
+Specs: I'm on Mac OS X 10.6.8, using Eclipse Indigo with Pydev.  This project and my pygame are using Python 2.7, and I've got pygame 1.9.1.  I've added the pygame folder to 
